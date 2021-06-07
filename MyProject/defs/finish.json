@@ -1,0 +1,25 @@
+{
+  "name": "Finish",
+  "type": "noninteractive",
+  "description": "Block that indicates the endpoint for the maze",
+  "shape": [
+    {
+      "x": -10,
+      "y": 10
+    },
+    {
+      "x": 10,
+      "y": 10
+    },
+    {
+      "x": 10,
+      "y": -10
+    },
+    {
+      "x": -10,
+      "y": -10
+    }
+  ],
+  "sensors": [],
+  "controller": "lib/finish.so"
+}

@@ -13,7 +13,8 @@ class MazeGenerator {
 public:
 	MazeGenerator() { srand(time(0)); }
 	void generate_maze(std::pair<double, double> location);
-	const std::vector<std::pair<double, double>> visited();
+	const std::vector<std::pair<double, double>> get_walls();
+	const std::pair<double, double> get_finish();
 
 
 private:
@@ -44,6 +45,27 @@ private:
 	void fill_maze();
 };
 
+const std::pair<double, double> MazeGenerator::get_finish() {
+	auto left_top = std::make_pair(-320, 180);
+	auto left_bot = std::make_pair(-320, -180);
+	auto right_top = std::make_pair(320, 180);
+	auto right_bot = std::make_pair(320, -180);
+	
+	if (is_visited(left_top)) {
+		return left_top;
+	}
+	if (is_visited(left_bot)) {
+		return left_bot;
+	}
+	if (is_visited(right_top)) {
+		return right_top;
+	}
+	if (is_visited(right_bot)) {
+		return right_bot;
+	}
+
+	return _finish;
+}
 
 bool MazeGenerator::is_visited(std::pair<double, double> location) {
 	if (std::find(_visited.begin(), _visited.end(), location) != _visited.end()) {
@@ -54,7 +76,7 @@ bool MazeGenerator::is_visited(std::pair<double, double> location) {
 	}
 }
 
-const std::vector<std::pair<double, double>> MazeGenerator::visited() {
+const std::vector<std::pair<double, double>> MazeGenerator::get_walls() {
 	vector<std::pair<double, double>> diff;
 	for (int i = 0; i < _start_walls.size(); i++) {
 		if (!is_visited(_start_walls[i])) {
@@ -189,9 +211,9 @@ void MazeGenerator::generate_maze(std::pair<double, double> location) {
 			std::cout << "FOUND NEIGHBOR\n";
 			stack.push_back(cell);
 			auto next_cell = choose_valid_neighbor(cell);
-			if (next_cell.first == 999 and next_cell.second == 999) {
+			/*if (next_cell.first == 999 and next_cell.second == 999) {
 				break;
-			}
+			}*/
 			_visited.push_back(next_cell);
 			stack.push_back(next_cell);
 			//_visited.push_back(next_cell);

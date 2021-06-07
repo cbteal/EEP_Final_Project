@@ -12,7 +12,7 @@ class WandererController : public Process, public AgentInterface {
 
     void init() {}
     void start() {}
-    inline void update() { track_velocity(10, 0.15); }
+    inline void update() { track_velocity(0.5, 0.5); }
     void stop() {}
 
 };
