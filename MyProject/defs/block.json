@@ -1,0 +1,19 @@
+{
+    "name": "Block",
+    "type": "static",
+    "description": "Blocks that will serve as walls for maze. Static object that does not move",
+    "shape": [
+        { "x": -10, "y": 10 },
+        { "x": 10, "y": 10 },
+        { "x": 10, "y": -10 },
+        { "x": -10, "y": -10 }
+    ],
+    "friction": {
+      "collision": 10,
+      "linear": 5000,
+      "rotational": 600
+    },
+    "sensors": [],
+    "mass": 1000,    
+    "controller": "lib/block.so"
+}
