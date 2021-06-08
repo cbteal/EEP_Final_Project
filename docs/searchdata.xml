@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<add>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">block.h</field>
+    <field name="url">block_8h_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text">enviro</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">block.h</field>
+    <field name="url">block_8h_source.html#l00008</field>
+    <field name="keywords"></field>
+    <field name="text">BlockController Process AgentInterface BlockController Process AgentInterface init start update damp_movement stop</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">block.h</field>
+    <field name="url">block_8h_source.html#l00020</field>
+    <field name="keywords"></field>
+    <field name="text">Block Agent Block json spec World world Agent spec world add_process c BlockController c DECLARE_INTERFACE Block</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">coordinator.h</field>
+    <field name="url">coordinator_8h_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text">enviro</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">coordinator.h</field>
+    <field name="url">coordinator_8h_source.html#l00010</field>
+    <field name="keywords"></field>
+    <field name="text">CoordinatorController Process AgentInterface CoordinatorController Process AgentInterface init notice_collisions_with Event e remove_agent MazeGenerator m MazeGenerator start std::make_pair m generate_maze start v m get_walls iter v add_agent iter first iter second finish m get_finish add_agent finish first finish second start update stop</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">coordinator.h</field>
+    <field name="url">coordinator_8h_source.html#l00038</field>
+    <field name="keywords"></field>
+    <field name="text">Coordinator Agent Coordinator json spec World world Agent spec world add_process c CoordinatorController c DECLARE_INTERFACE Coordinator</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">finish.h</field>
+    <field name="url">finish_8h_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text">enviro</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">finish.h</field>
+    <field name="url">finish_8h_source.html#l00008</field>
+    <field name="keywords"></field>
+    <field name="text">FinishController Process AgentInterface FinishController Process AgentInterface init start update stop</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">finish.h</field>
+    <field name="url">finish_8h_source.html#l00020</field>
+    <field name="keywords"></field>
+    <field name="text">Finish Agent Finish json spec World world Agent spec world add_process c FinishController c DECLARE_INTERFACE Finish</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">mazegenerator.h</field>
+    <field name="url">mazegenerator_8h_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">mazegenerator.h</field>
+    <field name="url">mazegenerator_8h_source.html#l00035</field>
+    <field name="keywords"></field>
+    <field name="text">MazeGenerator MazeGenerator srand time generate_maze std::pair&lt;double, double&gt; location std::vector&lt;std::pair&lt;double, double&gt; get_walls std::pair&lt;double, double&gt; get_finish _xmin _xmax _ymin _ymax _block_width _block_mid _block_width _true_ymax _ymax _block_mid _true_ymin _ymin _block_mid _true_xmax _xmax _block_mid _true_xmin _xmin _block_mid std::vector&lt;std::pair&lt;double, double&gt; _visited std::vector&lt;std::pair&lt;double, double&gt; _start_walls std::pair&lt;double, double&gt; _finish has_neighbor std::pair&lt;double, double&gt; location is_valid std::pair&lt;double, double&gt; location is_visited std::pair&lt;double, double&gt; location visited_neighbors std::pair&lt;double, double&gt; location std::pair&lt;double, double&gt; choose_valid_neighbor std::pair&lt;double, double&gt; location vector&lt;int&gt; generateRandomDirections fill_maze std::pair&lt;double, double&gt; MazeGenerator::get_finish left_top std::make_pair left_bot std::make_pair right_top std::make_pair right_bot std::make_pair is_visited left_top left_top is_visited left_bot left_bot is_visited right_top right_top is_visited right_bot right_bot _finish MazeGenerator::is_visited std::pair&lt;double, double&gt; location std::find _visited begin _visited end location _visited end std::vector&lt;std::pair&lt;double, double&gt; MazeGenerator::get_walls vector&lt;std::pair&lt;double, double&gt; diff i i _start_walls size i is_visited _start_walls i diff push_back _start_walls i std::cout _finish first _finish second diff MazeGenerator::is_valid std::pair&lt;double, double&gt; location location first _true_xmax location first _true_xmin location second _true_ymax location second _true_ymin MazeGenerator::visited_neighbors std::pair&lt;double, double&gt; location neighbors_visited left std::make_pair location first _block_width location second right std::make_pair location first _block_width location second up std::make_pair location first location second _block_width down std::make_pair location first location second _block_width is_visited left neighbors_visited is_visited right neighbors_visited is_visited up neighbors_visited is_visited down neighbors_visited neighbors_visited MazeGenerator::has_neighbor std::pair&lt;double, double&gt; location left std::make_pair location first _block_width location second right std::make_pair location first _block_width location second up std::make_pair location first location second _block_width down std::make_pair location first location second _block_width is_valid left is_visited left visited_neighbors left is_valid right is_visited right visited_neighbors right is_valid up is_visited up visited_neighbors up is_valid down is_visited down visited_neighbors down vector&lt;int&gt; MazeGenerator::generateRandomDirections vector&lt;int&gt; randoms i i i randoms push_back i std::random_shuffle randoms begin randoms end randoms MazeGenerator::fill_maze x x x y y y _start_walls push_back std::make_pair x y std::pair&lt;double, double&gt; MazeGenerator::choose_valid_neighbor std::pair&lt;double, double&gt; location vector&lt;std::pair&lt;double, double&gt; valid_cells left std::make_pair location first _block_width location second right std::make_pair location first _block_width location second up std::make_pair location first location second _block_width down std::make_pair location first location second _block_width is_valid left is_visited left visited_neighbors left valid_cells push_back left is_valid right is_visited right visited_neighbors right valid_cells push_back right is_valid up is_visited up visited_neighbors up valid_cells push_back up is_valid down is_visited down visited_neighbors down valid_cells push_back down std::random_shuffle valid_cells begin valid_cells end valid_cells MazeGenerator::generate_maze std::pair&lt;double, double&gt; location fill_maze vector&lt;std::pair&lt;double, double&gt; stack _visited push_back location stack push_back location stack empty cell stack back stack pop_back has_neighbor cell stack push_back cell next_cell choose_valid_neighbor cell _visited push_back next_cell stack push_back next_cell _finish _visited back</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">wanderer.h</field>
+    <field name="url">wanderer_8h_source.html#l00001</field>
+    <field name="keywords"></field>
+    <field name="text">enviro</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">wanderer.h</field>
+    <field name="url">wanderer_8h_source.html#l00008</field>
+    <field name="keywords"></field>
+    <field name="text">WandererController Process AgentInterface WandererController Process AgentInterface init start update stop</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">wanderer.h</field>
+    <field name="url">wanderer_8h_source.html#l00019</field>
+    <field name="keywords"></field>
+    <field name="text">Wanderer Agent Wanderer json spec World world Agent spec world add_process c WandererController c DECLARE_INTERFACE Wanderer</field>
+  </doc>
+  <doc>
+    <field name="type">class</field>
+    <field name="name">Block</field>
+    <field name="url">classBlock.html</field>
+    <field name="keywords">Block</field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">class</field>
+    <field name="name">BlockController</field>
+    <field name="url">classBlockController.html</field>
+    <field name="keywords">BlockController</field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">class</field>
+    <field name="name">Coordinator</field>
+    <field name="url">classCoordinator.html</field>
+    <field name="keywords">Coordinator</field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">class</field>
+    <field name="name">CoordinatorController</field>
+    <field name="url">classCoordinatorController.html</field>
+    <field name="keywords">CoordinatorController</field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">class</field>
+    <field name="name">Finish</field>
+    <field name="url">classFinish.html</field>
+    <field name="keywords">Finish</field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">class</field>
+    <field name="name">FinishController</field>
+    <field name="url">classFinishController.html</field>
+    <field name="keywords">FinishController</field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">class</field>
+    <field name="name">MazeGenerator</field>
+    <field name="url">classMazeGenerator.html</field>
+    <field name="keywords">MazeGenerator</field>
+    <field name="text">Generates Random Maze Maze generator randomly generates a random maze within a defined rectangle Note that at the moment the size is static and implementation is crude To-do Dynamically scale maze add param for maze size optimize finish line</field>
+  </doc>
+  <doc>
+    <field name="type">class</field>
+    <field name="name">Wanderer</field>
+    <field name="url">classWanderer.html</field>
+    <field name="keywords">Wanderer</field>
+    <field name="text"></field>
+  </doc>
+  <doc>
+    <field name="type">class</field>
+    <field name="name">WandererController</field>
+    <field name="url">classWandererController.html</field>
+    <field name="keywords">WandererController</field>
+    <field name="text"></field>
+  </doc>
+</add>
