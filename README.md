@@ -40,6 +40,10 @@ worked. It uses a 45 degree angle and 90 degree angle to maintain the hold on th
 right side. The speeds took some time to tune, as too fast or too slow and the
 robot would miss turns or get turned around.
 
+Ultimately, I spent 10s of hours and didn't implement the full functionality
+that I set out to. It is okay though, because the core goal was to navigate
+randomly generated mazes and that is what I accomplished.
+
 
 ## Installation and Use
 The project is so rudimentary at this point, that installation is as simple as
@@ -57,10 +61,13 @@ pulling the project and opening it up in docker. Then...
 
 Then open **http://localhost** in a browser
 
-
 A randomly generated maze should appear with a silly robot that will struggle
 to find the end of the maze (indicated by a gold block). The robot was able to
 successfully navigate the maze, but it is slow and painful to watch.
+
+
+Once the robot finishes, it will dissappear and you will need to restart enviro to
+generate another maze and robot.
 
 
 Unfortunately, I did not have more time to implement more functionality as I spent
