@@ -13,24 +13,10 @@
 	\class MazeGenerator
 	\brief Generates Random Maze
 
-	Maze generator randomly generates a random maze within a defined rectangle.
-	Note that at the moment, the size is static and implementation is crude.
-	To-do: Dynamically scale maze, add param for maze size, optimize finish line
+	Maze generator randomly generates a random maze within a defined rectangle.\n
+	Note that at the moment, the size is static and implementation is crude.\n
+	To-do: Dynamically scale maze, add param for maze size, optimize finish line,
 
-	\var _xmin double
-    \brief Minimum x coordinate of border
-    
-    \var _xmax double
-	\brief Maximum x coordinate of border
-
-	\var _ymin double
-	\brief Minimum y coordinate of border
-
-	\var _ymax double
-	\brief Maxium y coordinate of border
-
-	\var _block_width double
-	\brief Width of wall block
  */
 class MazeGenerator {
 public:
@@ -68,6 +54,15 @@ private:
 	void fill_maze();
 };
 
+/**
+	\brief Gets finish line coordinate
+
+	Get finish checks the corners of the map for an open cell to
+	place the finish line, which is just a custom agent.\n
+
+	To-do: Make smarter and randomize, incorporate scaling and dynamic
+	map size
+*/
 const std::pair<double, double> MazeGenerator::get_finish() {
 	auto left_top = std::make_pair(-320, 180);
 	auto left_bot = std::make_pair(-320, -180);
@@ -90,6 +85,13 @@ const std::pair<double, double> MazeGenerator::get_finish() {
 	return _finish;
 }
 
+/**
+	\brief Checks to see if maze generator has visited coordinate
+
+	\b is_visisted checks to see if the current coordinate has been
+	visited by the map generator. If it exists in the visited coordinates
+	list it returns true, else false.
+*/
 bool MazeGenerator::is_visited(std::pair<double, double> location) {
 	if (std::find(_visited.begin(), _visited.end(), location) != _visited.end()) {
 		return true;
@@ -99,6 +101,12 @@ bool MazeGenerator::is_visited(std::pair<double, double> location) {
 	}
 }
 
+/**
+	\brief Generates vector of coordinates for walls to generate
+
+	\b get_walls generates coordinates for walls by removing the visited
+	coordinates from all possible coordinates.
+*/
 const std::vector<std::pair<double, double>> MazeGenerator::get_walls() {
 	vector<std::pair<double, double>> diff;
 	for (int i = 0; i < _start_walls.size(); i++) {
@@ -110,6 +118,12 @@ const std::vector<std::pair<double, double>> MazeGenerator::get_walls() {
 	return diff;
 }
 
+/**
+	\brief Checks to see if coordinate is within the border
+
+	\b is_valid checks to see if a coordinate is within the border of the
+	maze. Returns true if inside the border, else false.
+*/
 bool MazeGenerator::is_valid(std::pair<double, double> location) {
 	if (location.first < _true_xmax && location.first > _true_xmin &&
 		location.second < _true_ymax && location.second > _true_ymin) {
@@ -120,6 +134,13 @@ bool MazeGenerator::is_valid(std::pair<double, double> location) {
 	}
 }
 
+/**
+	\brief Calculates how many neighboring coordinates have been visited
+
+	\b visited_neighbors checks the neighbors (left, up, right, down) to see
+	if they have been visited by the map generator and returns the number of
+	neighbors that have been visited.
+*/
 int MazeGenerator::visited_neighbors(std::pair<double, double> location) {
 	int neighbors_visited = 0;
 	auto left = std::make_pair(location.first - _block_width, location.second);
@@ -135,6 +156,13 @@ int MazeGenerator::visited_neighbors(std::pair<double, double> location) {
 	return neighbors_visited;
 }
 
+/**
+	\brief Checks to see if coordinate has a valid neighbor
+
+	\b has_neighbor checks to see if there is a valid neighbor which is used
+	by the map generator to determine if it can continue to move from its current
+	location.
+*/
 bool MazeGenerator::has_neighbor(std::pair<double, double> location) {
 
 	auto left = std::make_pair(location.first - _block_width, location.second);
@@ -157,7 +185,11 @@ bool MazeGenerator::has_neighbor(std::pair<double, double> location) {
 	return false;
 }
 
+/**
+	\brief Generates a random int used for choosing a direction (left, up, right, down)
 
+	Not used
+*/
 vector<int> MazeGenerator::generateRandomDirections() {
 	vector<int> randoms;
 	for (int i = 0; i < 4; i++)
@@ -168,6 +200,11 @@ vector<int> MazeGenerator::generateRandomDirections() {
 	return randoms;
 }
 
+/**
+	\brief Fills all possible maze coordinates
+
+	\b fill_maze will generate a vector of all possible coordinates
+*/
 void MazeGenerator::fill_maze() {
 	for (double x = -320; x <= 320; x += 20) {
 		for (double y = -180; y <= 180; y += 20) {
@@ -175,6 +212,13 @@ void MazeGenerator::fill_maze() {
 		}
 	}
 }
+
+/**
+	\brief Chooses a valid neighbor for the maze generator
+
+	\b choose_valid_neighbor will choose a neighbor which is valid, has not
+	been visited, and does not have more than one neighbor.
+*/
 std::pair<double, double> MazeGenerator::choose_valid_neighbor(std::pair<double, double> location) {
 	vector<std::pair<double, double>> valid_cells;
 	auto left = std::make_pair(location.first - _block_width, location.second);
@@ -204,21 +248,12 @@ std::pair<double, double> MazeGenerator::choose_valid_neighbor(std::pair<double,
 }
 
 
-//void MazeGenerator::generate_maze(std::pair<double,double> location) {
-//	//std::cout << "HELLO\n";
-//	//std::cout << "YMIN " << _true_ymin << "YMAX " << _true_ymax << " XMIN " << _true_xmin << " XMAX " << _true_xmax << "\n";
-//	if (visited_neighbors(location) > 2) {
-//		std::cout << "MORE THAN ONE VISITED NEIGHBORS\n";
-//		return;
-//	}
-//	_visited.push_back(location);
-//	std::cout << "Adding " << location.first << ", " << location.second << " \n";
-//	auto p = new_direction(location);
-//	generate_maze(p);
-//}
+/**
+	\brief Generates a random maze
 
-
-
+	\b generate_maze returns coordinates for the walls of a randomly
+	generated maze. Its input is the starting location for the generator.
+*/
 void MazeGenerator::generate_maze(std::pair<double, double> location) {
 	fill_maze();
 	vector<std::pair<double, double>> stack;
@@ -226,24 +261,19 @@ void MazeGenerator::generate_maze(std::pair<double, double> location) {
 	_visited.push_back(location);
 	stack.push_back(location);
 
-	while (!stack.empty()) {
-		auto cell = stack.back();
+	while (!stack.empty()) {   // While there are still possible paths
+		auto cell = stack.back(); // Grab top of stack (current location)
 		//std::cout << "STACK SIZE: " << stack.size() << "\n";
-		stack.pop_back();
-		if (has_neighbor(cell)) {
+		stack.pop_back(); // Pop current location off the stack
+		if (has_neighbor(cell)) { // If there is a valid neighbor
 			//std::cout << "FOUND NEIGHBOR\n";
-			stack.push_back(cell);
-			auto next_cell = choose_valid_neighbor(cell);
-			/*if (next_cell.first == 999 and next_cell.second == 999) {
-				break;
-			}*/
-			_visited.push_back(next_cell);
-			stack.push_back(next_cell);
-			//_visited.push_back(next_cell);
-			//std::cout << "TEST\n";
+			stack.push_back(cell); // Add current location back to stack
+			auto next_cell = choose_valid_neighbor(cell); // Select a valid neighbor to move to
+			_visited.push_back(next_cell); // Add neighbor coordinate to visited
+			stack.push_back(next_cell); // Add neighbor coordinate to stack (now current location)
 		}
 	}
 
-	_finish = _visited.back();
+	_finish = _visited.back(); // Not used, but returns last visited coordinate
 }
 #endif

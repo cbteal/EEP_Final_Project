@@ -73,9 +73,30 @@
   <doc>
     <field name="type">source</field>
     <field name="name">mazegenerator.h</field>
-    <field name="url">mazegenerator_8h_source.html#l00035</field>
+    <field name="url">mazegenerator_8h_source.html#l00021</field>
     <field name="keywords"></field>
-    <field name="text">MazeGenerator MazeGenerator srand time generate_maze std::pair&lt;double, double&gt; location std::vector&lt;std::pair&lt;double, double&gt; get_walls std::pair&lt;double, double&gt; get_finish _xmin _xmax _ymin _ymax _block_width _block_mid _block_width _true_ymax _ymax _block_mid _true_ymin _ymin _block_mid _true_xmax _xmax _block_mid _true_xmin _xmin _block_mid std::vector&lt;std::pair&lt;double, double&gt; _visited std::vector&lt;std::pair&lt;double, double&gt; _start_walls std::pair&lt;double, double&gt; _finish has_neighbor std::pair&lt;double, double&gt; location is_valid std::pair&lt;double, double&gt; location is_visited std::pair&lt;double, double&gt; location visited_neighbors std::pair&lt;double, double&gt; location std::pair&lt;double, double&gt; choose_valid_neighbor std::pair&lt;double, double&gt; location vector&lt;int&gt; generateRandomDirections fill_maze std::pair&lt;double, double&gt; MazeGenerator::get_finish left_top std::make_pair left_bot std::make_pair right_top std::make_pair right_bot std::make_pair is_visited left_top left_top is_visited left_bot left_bot is_visited right_top right_top is_visited right_bot right_bot _finish MazeGenerator::is_visited std::pair&lt;double, double&gt; location std::find _visited begin _visited end location _visited end std::vector&lt;std::pair&lt;double, double&gt; MazeGenerator::get_walls vector&lt;std::pair&lt;double, double&gt; diff i i _start_walls size i is_visited _start_walls i diff push_back _start_walls i std::cout _finish first _finish second diff MazeGenerator::is_valid std::pair&lt;double, double&gt; location location first _true_xmax location first _true_xmin location second _true_ymax location second _true_ymin MazeGenerator::visited_neighbors std::pair&lt;double, double&gt; location neighbors_visited left std::make_pair location first _block_width location second right std::make_pair location first _block_width location second up std::make_pair location first location second _block_width down std::make_pair location first location second _block_width is_visited left neighbors_visited is_visited right neighbors_visited is_visited up neighbors_visited is_visited down neighbors_visited neighbors_visited MazeGenerator::has_neighbor std::pair&lt;double, double&gt; location left std::make_pair location first _block_width location second right std::make_pair location first _block_width location second up std::make_pair location first location second _block_width down std::make_pair location first location second _block_width is_valid left is_visited left visited_neighbors left is_valid right is_visited right visited_neighbors right is_valid up is_visited up visited_neighbors up is_valid down is_visited down visited_neighbors down vector&lt;int&gt; MazeGenerator::generateRandomDirections vector&lt;int&gt; randoms i i i randoms push_back i std::random_shuffle randoms begin randoms end randoms MazeGenerator::fill_maze x x x y y y _start_walls push_back std::make_pair x y std::pair&lt;double, double&gt; MazeGenerator::choose_valid_neighbor std::pair&lt;double, double&gt; location vector&lt;std::pair&lt;double, double&gt; valid_cells left std::make_pair location first _block_width location second right std::make_pair location first _block_width location second up std::make_pair location first location second _block_width down std::make_pair location first location second _block_width is_valid left is_visited left visited_neighbors left valid_cells push_back left is_valid right is_visited right visited_neighbors right valid_cells push_back right is_valid up is_visited up visited_neighbors up valid_cells push_back up is_valid down is_visited down visited_neighbors down valid_cells push_back down std::random_shuffle valid_cells begin valid_cells end valid_cells MazeGenerator::generate_maze std::pair&lt;double, double&gt; location fill_maze vector&lt;std::pair&lt;double, double&gt; stack _visited push_back location stack push_back location stack empty cell stack back stack pop_back has_neighbor cell stack push_back cell next_cell choose_valid_neighbor cell _visited push_back next_cell stack push_back next_cell _finish _visited back</field>
+    <field name="text">MazeGenerator MazeGenerator srand time generate_maze std::pair&lt;double, double&gt; location std::vector&lt;std::pair&lt;double, double&gt; get_walls std::pair&lt;double, double&gt; get_finish _xmin _xmax _ymin _ymax _block_width _block_mid _block_width _true_ymax _ymax _block_mid _true_ymin _ymin _block_mid _true_xmax _xmax _block_mid _true_xmin _xmin _block_mid std::vector&lt;std::pair&lt;double, double&gt; _visited std::vector&lt;std::pair&lt;double, double&gt; _start_walls std::pair&lt;double, double&gt; _finish has_neighbor std::pair&lt;double, double&gt; location is_valid std::pair&lt;double, double&gt; location is_visited std::pair&lt;double, double&gt; location visited_neighbors std::pair&lt;double, double&gt; location std::pair&lt;double, double&gt; choose_valid_neighbor std::pair&lt;double, double&gt; location vector&lt;int&gt; generateRandomDirections fill_maze</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">mazegenerator.h</field>
+    <field name="url">mazegenerator_8h_source.html#l00066</field>
+    <field name="keywords"></field>
+    <field name="text">std::pair&lt;double, double&gt; MazeGenerator::get_finish left_top std::make_pair left_bot std::make_pair right_top std::make_pair right_bot std::make_pair is_visited left_top left_top is_visited left_bot left_bot is_visited right_top right_top is_visited right_bot right_bot _finish MazeGenerator::is_visited std::pair&lt;double, double&gt; location std::find _visited begin _visited end location _visited end</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">mazegenerator.h</field>
+    <field name="url">mazegenerator_8h_source.html#l00110</field>
+    <field name="keywords"></field>
+    <field name="text">std::vector&lt;std::pair&lt;double, double&gt; MazeGenerator::get_walls vector&lt;std::pair&lt;double, double&gt; diff i i _start_walls size i is_visited _start_walls i diff push_back _start_walls i std::cout _finish first _finish second diff MazeGenerator::is_valid std::pair&lt;double, double&gt; location location first _true_xmax location first _true_xmin location second _true_ymax location second _true_ymin MazeGenerator::visited_neighbors std::pair&lt;double, double&gt; location neighbors_visited left std::make_pair location first _block_width location second right std::make_pair location first _block_width location second up std::make_pair location first location second _block_width down std::make_pair location first location second _block_width is_visited left neighbors_visited is_visited right neighbors_visited is_visited up neighbors_visited is_visited down neighbors_visited neighbors_visited MazeGenerator::has_neighbor std::pair&lt;double, double&gt; location left std::make_pair location first _block_width location second right std::make_pair location first _block_width location second up std::make_pair location first location second _block_width down std::make_pair location first location second _block_width is_valid left is_visited left visited_neighbors left is_valid right is_visited right visited_neighbors right is_valid up is_visited up visited_neighbors up is_valid down is_visited down visited_neighbors down vector&lt;int&gt; MazeGenerator::generateRandomDirections vector&lt;int&gt; randoms i i i randoms push_back i std::random_shuffle randoms begin randoms end randoms MazeGenerator::fill_maze x x x y y y _start_walls push_back std::make_pair x y std::pair&lt;double, double&gt; MazeGenerator::choose_valid_neighbor std::pair&lt;double, double&gt; location vector&lt;std::pair&lt;double, double&gt; valid_cells left std::make_pair location first _block_width location second right std::make_pair location first _block_width location second up std::make_pair location first location second _block_width down std::make_pair location first location second _block_width is_valid left is_visited left visited_neighbors left valid_cells push_back left is_valid right is_visited right visited_neighbors right valid_cells push_back right is_valid up is_visited up visited_neighbors up valid_cells push_back up is_valid down is_visited down visited_neighbors down valid_cells push_back down std::random_shuffle valid_cells begin valid_cells end valid_cells</field>
+  </doc>
+  <doc>
+    <field name="type">source</field>
+    <field name="name">mazegenerator.h</field>
+    <field name="url">mazegenerator_8h_source.html#l00257</field>
+    <field name="keywords"></field>
+    <field name="text">MazeGenerator::generate_maze std::pair&lt;double, double&gt; location fill_maze vector&lt;std::pair&lt;double, double&gt; stack _visited push_back location stack push_back location stack empty cell stack back stack pop_back has_neighbor cell stack push_back cell next_cell choose_valid_neighbor cell _visited push_back next_cell stack push_back next_cell _finish _visited back</field>
   </doc>
   <doc>
     <field name="type">source</field>
@@ -146,6 +167,30 @@
     <field name="url">classMazeGenerator.html</field>
     <field name="keywords">MazeGenerator</field>
     <field name="text">Generates Random Maze Maze generator randomly generates a random maze within a defined rectangle Note that at the moment the size is static and implementation is crude To-do Dynamically scale maze add param for maze size optimize finish line</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">MazeGenerator::generate_maze</field>
+    <field name="args">(std::pair&lt; double, double &gt; location)</field>
+    <field name="url">classMazeGenerator.html#a67dbf663cdcc539fdb7583e8adcd58dc</field>
+    <field name="keywords">generate_maze MazeGenerator::generate_maze MazeGenerator</field>
+    <field name="text">Generates a random maze generate_maze returns coordinates for the walls of a randomly generated maze Its input is the starting location for the generator</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">MazeGenerator::get_walls</field>
+    <field name="args">()</field>
+    <field name="url">classMazeGenerator.html#ad3273f40be7ddb219fb419a8c0d707c3</field>
+    <field name="keywords">get_walls MazeGenerator::get_walls MazeGenerator</field>
+    <field name="text">Generates vector of coordinates for walls to generate get_walls generates coordinates for walls by removing the visited coordinates from all possible coordinates</field>
+  </doc>
+  <doc>
+    <field name="type">function</field>
+    <field name="name">MazeGenerator::get_finish</field>
+    <field name="args">()</field>
+    <field name="url">classMazeGenerator.html#a98a262b1588845a44c47ff59f9f3dccd</field>
+    <field name="keywords">get_finish MazeGenerator::get_finish MazeGenerator</field>
+    <field name="text">Gets finish line coordinate Get finish checks the corners of the map for an open cell to place the finish line which is just a custom agent To-do Make smarter and randomize incorporate scaling and dynamic map size</field>
   </doc>
   <doc>
     <field name="type">class</field>

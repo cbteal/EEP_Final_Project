@@ -12,21 +12,54 @@ Generates Random Maze.
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{classMazeGenerator_a67dbf663cdcc539fdb7583e8adcd58dc}\label{classMazeGenerator_a67dbf663cdcc539fdb7583e8adcd58dc}} 
-void {\bfseries generate\+\_\+maze} (std\+::pair$<$ double, double $>$ location)
-\item 
-\mbox{\Hypertarget{classMazeGenerator_ad3273f40be7ddb219fb419a8c0d707c3}\label{classMazeGenerator_ad3273f40be7ddb219fb419a8c0d707c3}} 
-const std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ {\bfseries get\+\_\+walls} ()
-\item 
-\mbox{\Hypertarget{classMazeGenerator_a98a262b1588845a44c47ff59f9f3dccd}\label{classMazeGenerator_a98a262b1588845a44c47ff59f9f3dccd}} 
-const std\+::pair$<$ double, double $>$ {\bfseries get\+\_\+finish} ()
-\end{DoxyCompactItemize}
+void \hyperlink{classMazeGenerator_a67dbf663cdcc539fdb7583e8adcd58dc}{generate\+\_\+maze} (std\+::pair$<$ double, double $>$ location)
+\begin{DoxyCompactList}\small\item\em Generates a random maze. \end{DoxyCompactList}\item 
+const std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ \hyperlink{classMazeGenerator_ad3273f40be7ddb219fb419a8c0d707c3}{get\+\_\+walls} ()
+\begin{DoxyCompactList}\small\item\em Generates vector of coordinates for walls to generate. \end{DoxyCompactList}\item 
+const std\+::pair$<$ double, double $>$ \hyperlink{classMazeGenerator_a98a262b1588845a44c47ff59f9f3dccd}{get\+\_\+finish} ()
+\begin{DoxyCompactList}\small\item\em Gets finish line coordinate. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 Generates Random Maze. 
 
-Maze generator randomly generates a random maze within a defined rectangle. Note that at the moment, the size is static and implementation is crude. To-\/do\+: Dynamically scale maze, add param for maze size, optimize finish line 
+Maze generator randomly generates a random maze within a defined rectangle.~\newline
+Note that at the moment, the size is static and implementation is crude.~\newline
+To-\/do\+: Dynamically scale maze, add param for maze size, optimize finish line, 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classMazeGenerator_a67dbf663cdcc539fdb7583e8adcd58dc}\label{classMazeGenerator_a67dbf663cdcc539fdb7583e8adcd58dc}} 
+\index{Maze\+Generator@{Maze\+Generator}!generate\+\_\+maze@{generate\+\_\+maze}}
+\index{generate\+\_\+maze@{generate\+\_\+maze}!Maze\+Generator@{Maze\+Generator}}
+\subsubsection{\texorpdfstring{generate\+\_\+maze()}{generate\_maze()}}
+{\footnotesize\ttfamily void Maze\+Generator\+::generate\+\_\+maze (\begin{DoxyParamCaption}\item[{std\+::pair$<$ double, double $>$}]{location }\end{DoxyParamCaption})}
+
+
+
+Generates a random maze. 
+
+{\bfseries generate\+\_\+maze} returns coordinates for the walls of a randomly generated maze. Its input is the starting location for the generator. \mbox{\Hypertarget{classMazeGenerator_a98a262b1588845a44c47ff59f9f3dccd}\label{classMazeGenerator_a98a262b1588845a44c47ff59f9f3dccd}} 
+\index{Maze\+Generator@{Maze\+Generator}!get\+\_\+finish@{get\+\_\+finish}}
+\index{get\+\_\+finish@{get\+\_\+finish}!Maze\+Generator@{Maze\+Generator}}
+\subsubsection{\texorpdfstring{get\+\_\+finish()}{get\_finish()}}
+{\footnotesize\ttfamily const std\+::pair$<$ double, double $>$ Maze\+Generator\+::get\+\_\+finish (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Gets finish line coordinate. 
+
+Get finish checks the corners of the map for an open cell to place the finish line, which is just a custom agent.~\newline
+ To-\/do\+: Make smarter and randomize, incorporate scaling and dynamic map size \mbox{\Hypertarget{classMazeGenerator_ad3273f40be7ddb219fb419a8c0d707c3}\label{classMazeGenerator_ad3273f40be7ddb219fb419a8c0d707c3}} 
+\index{Maze\+Generator@{Maze\+Generator}!get\+\_\+walls@{get\+\_\+walls}}
+\index{get\+\_\+walls@{get\+\_\+walls}!Maze\+Generator@{Maze\+Generator}}
+\subsubsection{\texorpdfstring{get\+\_\+walls()}{get\_walls()}}
+{\footnotesize\ttfamily const std\+::vector$<$ std\+::pair$<$ double, double $>$ $>$ Maze\+Generator\+::get\+\_\+walls (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Generates vector of coordinates for walls to generate. 
+
+{\bfseries get\+\_\+walls} generates coordinates for walls by removing the visited coordinates from all possible coordinates. 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
 \item 

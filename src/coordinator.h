@@ -18,15 +18,15 @@ public:
          });
         
         MazeGenerator m = MazeGenerator();
-        auto start = std::make_pair(0.0, 0.0);
+        auto start = std::make_pair(0.0, 0.0); // Starting location
         m.generate_maze(start);
         auto v = m.get_walls();
 
         for (auto iter : v) {
-            add_agent("Block", iter.first, iter.second, 0, { {"fill", "blue"} });
+            add_agent("Block", iter.first, iter.second, 0, { {"fill", "blue"} }); // Add walls
         }
         auto finish = m.get_finish();
-        add_agent("Finish", finish.first, finish.second, 0, { {"fill", "gold"} });
+        add_agent("Finish", finish.first, finish.second, 0, { {"fill", "gold"} }); // Add finish line
 
     }
     void start() {}

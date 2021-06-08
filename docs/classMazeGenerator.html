@@ -62,20 +62,85 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a67dbf663cdcc539fdb7583e8adcd58dc"><td class="memItemLeft" align="right" valign="top"><a id="a67dbf663cdcc539fdb7583e8adcd58dc"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>generate_maze</b> (std::pair&lt; double, double &gt; location)</td></tr>
+<tr class="memitem:a67dbf663cdcc539fdb7583e8adcd58dc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMazeGenerator.html#a67dbf663cdcc539fdb7583e8adcd58dc">generate_maze</a> (std::pair&lt; double, double &gt; location)</td></tr>
+<tr class="memdesc:a67dbf663cdcc539fdb7583e8adcd58dc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates a random maze.  <a href="#a67dbf663cdcc539fdb7583e8adcd58dc">More...</a><br /></td></tr>
 <tr class="separator:a67dbf663cdcc539fdb7583e8adcd58dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad3273f40be7ddb219fb419a8c0d707c3"><td class="memItemLeft" align="right" valign="top"><a id="ad3273f40be7ddb219fb419a8c0d707c3"></a>
-const std::vector&lt; std::pair&lt; double, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_walls</b> ()</td></tr>
+<tr class="memitem:ad3273f40be7ddb219fb419a8c0d707c3"><td class="memItemLeft" align="right" valign="top">const std::vector&lt; std::pair&lt; double, double &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMazeGenerator.html#ad3273f40be7ddb219fb419a8c0d707c3">get_walls</a> ()</td></tr>
+<tr class="memdesc:ad3273f40be7ddb219fb419a8c0d707c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generates vector of coordinates for walls to generate.  <a href="#ad3273f40be7ddb219fb419a8c0d707c3">More...</a><br /></td></tr>
 <tr class="separator:ad3273f40be7ddb219fb419a8c0d707c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98a262b1588845a44c47ff59f9f3dccd"><td class="memItemLeft" align="right" valign="top"><a id="a98a262b1588845a44c47ff59f9f3dccd"></a>
-const std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>get_finish</b> ()</td></tr>
+<tr class="memitem:a98a262b1588845a44c47ff59f9f3dccd"><td class="memItemLeft" align="right" valign="top">const std::pair&lt; double, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classMazeGenerator.html#a98a262b1588845a44c47ff59f9f3dccd">get_finish</a> ()</td></tr>
+<tr class="memdesc:a98a262b1588845a44c47ff59f9f3dccd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets finish line coordinate.  <a href="#a98a262b1588845a44c47ff59f9f3dccd">More...</a><br /></td></tr>
 <tr class="separator:a98a262b1588845a44c47ff59f9f3dccd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Generates Random Maze. </p>
-<p>Maze generator randomly generates a random maze within a defined rectangle. Note that at the moment, the size is static and implementation is crude. To-do: Dynamically scale maze, add param for maze size, optimize finish line </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p>Maze generator randomly generates a random maze within a defined rectangle.<br />
+Note that at the moment, the size is static and implementation is crude.<br />
+To-do: Dynamically scale maze, add param for maze size, optimize finish line, </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a67dbf663cdcc539fdb7583e8adcd58dc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67dbf663cdcc539fdb7583e8adcd58dc">&#9670;&nbsp;</a></span>generate_maze()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MazeGenerator::generate_maze </td>
+          <td>(</td>
+          <td class="paramtype">std::pair&lt; double, double &gt;&#160;</td>
+          <td class="paramname"><em>location</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates a random maze. </p>
+<p><b>generate_maze</b> returns coordinates for the walls of a randomly generated maze. Its input is the starting location for the generator. </p>
+
+</div>
+</div>
+<a id="a98a262b1588845a44c47ff59f9f3dccd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a98a262b1588845a44c47ff59f9f3dccd">&#9670;&nbsp;</a></span>get_finish()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::pair&lt; double, double &gt; MazeGenerator::get_finish </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Gets finish line coordinate. </p>
+<p>Get finish checks the corners of the map for an open cell to place the finish line, which is just a custom agent.<br />
+ To-do: Make smarter and randomize, incorporate scaling and dynamic map size </p>
+
+</div>
+</div>
+<a id="ad3273f40be7ddb219fb419a8c0d707c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3273f40be7ddb219fb419a8c0d707c3">&#9670;&nbsp;</a></span>get_walls()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; std::pair&lt; double, double &gt; &gt; MazeGenerator::get_walls </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generates vector of coordinates for walls to generate. </p>
+<p><b>get_walls</b> generates coordinates for walls by removing the visited coordinates from all possible coordinates. </p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="mazegenerator_8h_source.html">mazegenerator.h</a></li>
 </ul>
 </div><!-- contents -->
