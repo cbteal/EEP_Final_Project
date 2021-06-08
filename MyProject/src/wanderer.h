@@ -9,10 +9,9 @@ class WandererController : public Process, public AgentInterface {
 
     public:
     WandererController() : Process(), AgentInterface() {}
-
     void init() {}
     void start() {}
-    inline void update() { track_velocity(0.5, 0.5); }
+    void update();
     void stop() {}
 
 };
@@ -22,6 +21,7 @@ class Wanderer : public Agent {
     Wanderer(json spec, World& world) : Agent(spec, world) {
         add_process(c);
     }
+    
     private:
     WandererController c;
 };

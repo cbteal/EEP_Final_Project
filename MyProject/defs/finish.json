@@ -1,6 +1,6 @@
 {
   "name": "Finish",
-  "type": "noninteractive",
+  "type": "static",
   "description": "Block that indicates the endpoint for the maze",
   "shape": [
     {
@@ -21,5 +21,11 @@
     }
   ],
   "sensors": [],
+  "friction": {
+    "collision": 10,
+    "linear": 5000,
+    "rotational": 600
+  },
+  "mass": 1000,
   "controller": "lib/finish.so"
 }

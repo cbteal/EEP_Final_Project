@@ -13,8 +13,9 @@ public:
     CoordinatorController() : Process(), AgentInterface() {}
 
     void init() {
-        
-
+        notice_collisions_with("Wanderer", [&](Event& e) {
+                remove_agent(id());
+         });
         
         MazeGenerator m = MazeGenerator();
         auto start = std::make_pair(0.0, 0.0);

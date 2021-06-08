@@ -3,17 +3,51 @@
     "type": "dynamic",
     "description": "Replace this string with a description",
     "shape": [
-        { "x": -5, "y": 5 },
-        { "x": 5, "y": 5 },
-        { "x": 5, "y": -5 },
-        { "x": -5, "y": -5 }
+        { "x": -3, "y": 3 },
+        { "x": 3, "y": 3 },
+        { "x": 3, "y": -3 },
+        { "x": -3, "y": -3 }
     ],
     "friction": {
-      "collision": 5,
-      "linear": 40,
+      "collision": 100,
+      "linear": 50,
       "rotational": 600
     },
-    "sensors": [],
+  "sensors": [
+    {
+      "type": "range",
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": 0
+    },
+    {
+      "type": "range",
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": 0.795
+    },
+    {
+      "type": "range",
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": 5.4882
+    },
+    {
+      "type": "range",
+      "location": {
+        "x": 0,
+        "y": 0
+      },
+      "direction": 1.5708
+    }
+
+  ],
     "mass": 1,    
     "controller": "lib/wanderer.so"
 }

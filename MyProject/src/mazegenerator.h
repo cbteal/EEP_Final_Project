@@ -9,6 +9,29 @@
 #include "ctime"
 #include <list>
 
+/** 
+	\class MazeGenerator
+	\brief Generates Random Maze
+
+	Maze generator randomly generates a random maze within a defined rectangle.
+	Note that at the moment, the size is static and implementation is crude.
+	To-do: Dynamically scale maze, add param for maze size, optimize finish line
+
+	\var _xmin double
+    \brief Minimum x coordinate of border
+    
+    \var _xmax double
+	\brief Maximum x coordinate of border
+
+	\var _ymin double
+	\brief Minimum y coordinate of border
+
+	\var _ymax double
+	\brief Maxium y coordinate of border
+
+	\var _block_width double
+	\brief Width of wall block
+ */
 class MazeGenerator {
 public:
 	MazeGenerator() { srand(time(0)); }
@@ -172,7 +195,7 @@ std::pair<double, double> MazeGenerator::choose_valid_neighbor(std::pair<double,
 		valid_cells.push_back(down);
 	}
 
-	std::cout << "VALID CELLS: " << valid_cells.size() << "\n";
+	//std::cout << "VALID CELLS: " << valid_cells.size() << "\n";
 
 
 	std::random_shuffle(valid_cells.begin(), valid_cells.end());
@@ -205,10 +228,10 @@ void MazeGenerator::generate_maze(std::pair<double, double> location) {
 
 	while (!stack.empty()) {
 		auto cell = stack.back();
-		std::cout << "STACK SIZE: " << stack.size() << "\n";
+		//std::cout << "STACK SIZE: " << stack.size() << "\n";
 		stack.pop_back();
 		if (has_neighbor(cell)) {
-			std::cout << "FOUND NEIGHBOR\n";
+			//std::cout << "FOUND NEIGHBOR\n";
 			stack.push_back(cell);
 			auto next_cell = choose_valid_neighbor(cell);
 			/*if (next_cell.first == 999 and next_cell.second == 999) {
@@ -217,7 +240,7 @@ void MazeGenerator::generate_maze(std::pair<double, double> location) {
 			_visited.push_back(next_cell);
 			stack.push_back(next_cell);
 			//_visited.push_back(next_cell);
-			std::cout << "TEST\n";
+			//std::cout << "TEST\n";
 		}
 	}
 
